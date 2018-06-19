@@ -12,9 +12,11 @@
     "dartanalyzer": "cd dist/dart && pub install && cd ../.. && ts-node scripts/ci/dart_analyzer",
     "demo-app": "ng serve",
     "test": "karma start test/karma.conf.js",
-    "tslint" : "tslint -c tslint.json 'src/**/*.ts'",
+    "tslint": "tslint -c tslint.json 'src/**/*.ts'",
     "typings": "typings install --ambient",
-    "e2e": "protractor ./protractor.conf.js"
+    "e2e": "protractor ./protractor.conf.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "version": "2.0.0-alpha.0",
   "license": "MIT",
@@ -26,11 +28,12 @@
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "mapnik": "^3.5.2",
-    "protractor": "^3.1.1",
+    "protractor": "^4.0.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.4",
-    "zone.js": "0.5.15"
+    "zone.js": "0.5.15",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "angular-cli": "^0.0.24",
@@ -63,5 +66,6 @@
     "typescript": "^1.7.5",
     "typings": "^0.6.8",
     "which": "^1.2.4"
-  }
+  },
+  "snyk": true
 }
